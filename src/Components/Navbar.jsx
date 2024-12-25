@@ -16,11 +16,11 @@ const Navbar = () => {
 
     return (
         <div className='bg-green-950 fixed w-full top-0 left-0 z-50'>
-            <nav id='navMenu' className='container flex justify-between h-16 sm:h-20'>
+            <nav className='container flex items-center justify-between h-16 sm:h-20'>
                 <div className='font-Lobster flex items-center sm:text-2xl'>IndorePlants.</div>
                 <div
                     className={`absolute top-0 min-h-[80vh] w-full 
-                bg-green-950/80 backdrop-blur-sm flex items-center justify-center
+                bg-green-950/80 backdrop-blur-sm flex items-center justify-center lg:justify-end
                  duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg-w-auto ${isOpen ? 'left-[0]' : 'left-[-100%]'}`}
                 >
                     <ul className='flex flex-col lg:flex-row items-center gap-8'>
