@@ -1,7 +1,7 @@
 import React from 'react'
 import home_img from '../assets/home.png'
 
-const Home = () => {
+const Hero = () => {
   return (
     <section className='relative'>
       <div className='container'>
@@ -71,4 +71,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Hero
