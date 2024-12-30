@@ -6,17 +6,17 @@ const Hero = () => {
 
   useEffect(() => {
     const sr = ScrollReveal({
-      origin:'top',
-      distance:'60px',
+      origin: 'top',
+      distance: '60px',
       duration: 2500,
       delay: 300,
       reset: true
     })
-   
+
     sr.reveal(`.home_data`);
-    sr.reveal(`.home_image`, {scale: 0.5});
+    sr.reveal(`.home_image`, { scale: 0.5 });
   }, []);
-  
+
   return (
     <section id='home' className='relative'>
       <div className='container'>
