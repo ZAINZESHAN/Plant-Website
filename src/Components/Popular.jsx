@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cart_1 from '../assets/cart-1.png'
 import cart_2 from '../assets/cart-2.png'
 import cart_3 from '../assets/cart-3.png'
 import cart_4 from '../assets/cart-4.png'
+import ScrollReveal from 'scrollreveal'
 
 const Popular = () => {
+
+    useEffect(() => {
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2500,
+            delay: 300,
+            reset: true,
+        });
+    
+        sr.reveal('.popular_top');
+        sr.reveal('.popular_card', { interval: 100 });
+    
+    }, []);
+    
     return (
-        <section className='bg-green-900'>
-            <div className='flex flex-col items-center gap-3 text-center mb-40'>
+        <section id='popular' className='bg-green-900'>
+            <div className='popular_top flex flex-col items-center gap-3 text-center mb-40'>
                 <h2 className='title'>Your Choice Plant</h2>
                 <p className='max-w-2xl'>Follow instruction for more</p>
             </div>

@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import home_img from '../assets/home.png'
+import ScrollReveal from 'scrollreveal'
 
 const Hero = () => {
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin:'top',
+      distance:'60px',
+      duration: 2500,
+      delay: 300,
+      reset: true
+    })
+   
+    sr.reveal(`.home_data`);
+    sr.reveal(`.home_image`, {scale: 0.5});
+  }, []);
+  
   return (
-    <section className='relative'>
+    <section id='home' className='relative'>
       <div className='container'>
         <div
           className='w-64 h-64 bg-green-700 rounded-full blur-3xl -z-10 
@@ -17,7 +32,7 @@ const Hero = () => {
 
         <div className='flex flex-col items-center gap-5 lg:flex-row'>
           {/* content */}
-          <div className='w-full space-y-5 lg:w-1/2'>
+          <div className='home_data w-full space-y-5 lg:w-1/2'>
             <h1>
               <span className='text-yellow-500'>Plants</span> make a
               <br />
@@ -50,13 +65,13 @@ const Hero = () => {
               <i className='ri-linkedin-fill text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer'></i>
             </div>
           </div>
-          <div className='w-full relative lg:w-1/2'>
+          <div className='home_image w-full relative lg:w-1/2'>
             <img src={home_img} alt='home-image' />
-            
+
             <div className='absolute -top-10 right-0 opacity-30 xl:top-5 animate-movingY'>
               <i className='ri-leaf-line text-6xl text-yellow-500'></i>
             </div>
-            
+
             <div className='absolute bottom-0 left-0 opacity-30 xl:bottom-12 animate-rotating'>
               <i className='ri-flower-line  text-6xl text-yellow-500'></i>
             </div>

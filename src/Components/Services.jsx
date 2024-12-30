@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ScrollReveal from 'scrollreveal';
 
 const Services = () => {
+
+    useEffect(() => {
+        const sr = ScrollReveal({
+          origin:'top',
+          distance:'60px',
+          duration: 2500,
+          delay: 300,
+          reset: true
+        })
+       
+        sr.reveal(`.service_card`, {interval: 100}) // Staggered animation
+    }, []);
+
     return (
         <div className='bg-white text-gray-900 py-20'>
             <div className='container w-full grid grid-cols-1 gap-8 md:grid-cols-2 
             lg:grid-cols-3 xl:grid-cols-4 '>
 
                 {/* card 1 */}
-                <div className='border border-green-900 p-5 cursor-pointer
+                <div className='service_card border border-green-900 p-5 cursor-pointer
                 rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5'>
                     <div className='flex items-center gap-5'>
                         <i className='ri-truck-line text-3xl md:text-4xl xl:text-5xl'></i>
@@ -23,7 +37,7 @@ const Services = () => {
                 </div>
 
                 {/* card 2 */}
-                <div className='border border-green-900 p-5 cursor-pointer
+                <div className='service_card border border-green-900 p-5 cursor-pointer
                 rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5'>
                     <div className='flex items-center gap-5'>
                         <i className='ri-customer-service-line text-3xl md:text-4xl xl:text-5xl'></i>
@@ -39,7 +53,7 @@ const Services = () => {
                 </div>
 
                 {/* card 3 */}
-                <div className='border border-green-900 p-5 cursor-pointer
+                <div className='service_card border border-green-900 p-5 cursor-pointer
                 rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5'>
                     <div className='flex items-center gap-5'>
                         <i className='ri-plant-line text-3xl md:text-4xl xl:text-5xl'></i>
@@ -55,7 +69,7 @@ const Services = () => {
                 </div>
 
                 {/* card 4 */}
-                <div className='border border-green-900 p-5 cursor-pointer
+                <div className='service_card border border-green-900 p-5 cursor-pointer
                 rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5'>
                     <div className='flex items-center gap-5'>
                         <i className='ri-money-dollar-circle-line text-3xl md:text-4xl xl:text-5xl'></i>

@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }*/
 
+html{
+  @apply overflow-x-hidden scroll-smooth;
+}
+
 body {
   @apply bg-green-950 text-white font-Jost tracking-wider;
 }
@@ -17,6 +21,7 @@ body {
 section {
   @apply py-20 md:py-28;
 }
+
 
 h1 {
   @apply text-3xl md:text-4xl xl:text-5xl font-bold;
@@ -31,7 +36,7 @@ h3{
 }
 
 .nav-link {
-  @apply text-lg font-bold duration-300;
+  @apply text-lg font-bold duration-300 cursor-pointer;
 }
 
 .nav-link:hover {
@@ -71,3 +76,5 @@ h3{
   height:30px;
   margin-top:20px
 }
+
+

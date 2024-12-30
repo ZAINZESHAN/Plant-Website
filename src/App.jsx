@@ -1,5 +1,6 @@
 import './App.css'
 import About from './Components/About'
+import Footer from './Components/Footer'
 import Hero from './Components/Hero'
 import Navbar from './Components/Navbar'
 import Popular from './Components/Popular'
@@ -15,6 +16,7 @@ function App() {
       <About/>
       <Popular/>
       <Review/>
+      <Footer/>
     </>
   )
 }

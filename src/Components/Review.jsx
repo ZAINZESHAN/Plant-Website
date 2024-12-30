@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import review_1 from '../assets/review-1.jpg'
 import review_2 from '../assets/review-2.jpg'
 import review_3 from '../assets/review-3.jpg'
 import review_4 from '../assets/review-4.jpg'
 import leaf_4 from '../assets/leaf-4.png'
+import ScrollReveal from 'scrollreveal'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -15,13 +16,24 @@ import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules'
 
 const Review = () => {
-  return (
-    <section className='relative mb-20 md:mb-28 overflow-hidden'>
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '60px',
+      duration: 2500,
+      delay: 300,
+      reset: true
+    })
 
+    sr.reveal(`.review_top`)
+    sr.reveal(`.review_swiper`, {origin: "right"})
+    sr.reveal(`.review_leaf`, {delay: 1000, origin: "left"})
+  }, [])
+
+  return (
+    <section id='review' className='relative mb-20 md:mb-28 overflow-hidden'>
       <div className='absolute -top-8 -left-12 opacity-50'>
-        <img src={leaf_4} alt="leaf_image" 
-        className='w-40 md:w-52 xl:w-64'
-        />
+        <img src={leaf_4} alt='leaf_image' className='review_leaf w-40 md:w-52 xl:w-64' />
       </div>
 
       <style>
@@ -40,12 +52,12 @@ const Review = () => {
           }
         `}
       </style>
-      <div className='flex flex-col items-center gap-3 text-center mb-10 md:mb-20'>
+      <div className='review_top flex flex-col items-center gap-3 text-center mb-10 md:mb-20'>
         <h2 className='title'>Customer Review</h2>
         <p className='max-w-2xl'>Follow Instruction for more</p>
       </div>
 
-      <div className='container'>
+      <div className='review_swiper container'>
         <div className='py-12'>
           <Swiper
             speed={400}
