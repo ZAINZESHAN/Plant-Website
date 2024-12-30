@@ -65,3 +65,9 @@ h3{
 .popular_card:hover img{
   @apply -top-8;
 }
+
+.swiper-pagination {
+  bottom: 30px;
+  height:30px;
+  margin-top:20px
+}
