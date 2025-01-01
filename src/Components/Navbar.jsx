@@ -38,7 +38,7 @@ const Navbar = () => {
             <nav className='container flex items-center justify-between h-16 sm:h-20'>
                 <div className='font-Lobster flex items-center sm:text-2xl'>IndorePlants.</div>
                 <div
-                    className={`absolute top-0 min-h-[80vh] w-full 
+                    className={`absolute top-0 min-h-[100vh] w-full 
                     bg-green-950/80 backdrop-blur-sm flex items-center justify-center lg:justify-end
                     duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto ${isOpen ? 'left-[0]' : 'left-[-100%]'}`}
                 >
